@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROSSBALL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="img/CrossBallLogo.svg" alt=""></a>
+
+        <div class="alerts mobile">
+            <a href="#"><img src="img/Bag.svg" alt=""></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+        </div>
+
+        <nav class="navigation">
+            <ul class="topmenu">
+                <li><a href="#">Расписание</a></li>
+                <li><a href="#">Игровые отчеты</a></li>
+                <li><a href="#">Статистика</a></li>
+                <li class="mobileOption"><a href="#">Ближайшие игры</a></li>
+                <li class="mobileOption"><a href="#">История заказов</a></li>
+                <li class="mobileOption"><a href="#">Выйти</a></li>
+                <li><a href="#">Еще <img src="img/DropdownArrow.svg" alt=""></a>
+                    <ul class="submenu">
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Новости</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="userBlock">
+            <div class="dropdown">
+                <button onclick="headerDropdown()" class="dropbtn"><img src="img/DropdownLogo.svg" alt=""
+                        style="width: 24px; height: 24px;"><img src="img/DropdownArrow.svg" alt=""
+                        style="width: 10px; height: 5px;"></button>
+                <div id="headerDropdown" class="dropdown-content">
+                    <a href="#"><img src="img/DropdownLogo.svg" alt="" style="width: 24px; height: 24px;"></a>
+                    <a href="#"><img src="img/DropdownLogo.svg" alt="" style="width: 24px; height: 24px;"></a>
+                    <a href="#"><img src="img/DropdownLogo.svg" alt="" style="width: 24px; height: 24px;"></a>
+                </div>
+            </div>
+
+            <div class="imageProfile">
+                <a href="#"><img src="img/ProfileImage.png" alt=""></a>
+            </div>
+
+            <div class="alerts">
+                <a href="#"><img src="img/Bag.svg" alt=""></a>
+            </div>
+        </div>
+
+
+    </header>
+
+    <div class="crossballContent">
+        <div class="crossballUser">
+            <div class="crossballUserFlexBlock">
+                <div class="crossballAboutUserBlock">
+                    <div class="crossballAboutUserImage">
+                        <img src="img/SidebarProfileImage.png" alt="">
+                    </div>
+
+                    <div class="crossballAboutUserNameAndTotal">
+                        <span>89.40</span>
+                        <p>Елишакашвили Михо</p>
+                    </div>
+                </div>
+
+                <div class="crossballUserInfoEdit">
+                    <a href="#"><img src="img/Edit.svg" alt="">Редактировать</a>
+                    <div class="crossballUserShare">
+                        <p>Поделиться</p>
+                        <a href="#"><img src="img/FB.svg" alt=""></a>
+                        <a href="#"><img src="img/VK.svg" alt=""></a>
+                        <a href="#"><img src="img/Link.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="crossballSidebarContent">
+            <div class="dropdown">
+                <button onclick="sidebarDropdown()" class="dropbtn">
+                    <img src="img/User.svg" alt="">
+                    Статистика
+                    <img src="img/DropdownArrow.svg" alt="" style="width: 10px; height: 5px;"></button>
+                <div id="sidebarDropdown" class="dropdown-content">
+                    <a href="#">Футбол</a>
+                    <a href="#">Баскетбол</a>
+                    <a href="#">Волейбол</a>
+                </div>
+            </div>
+
+            <div class="crossballSidebarContentOptions">
+                <div class="crossballOption comingGames">
+                    <a href=""><img src="img/Calendar.svg" alt="">Ближайшие игры</a>
+                </div>
+
+                <div class="crossballOption gamesReports">
+                    <a href=""><img src="img/Calendar.svg" alt="">Игровые отчеты</a>
+                </div>
+
+                <div class="crossballOption orderHistory">
+                    <a href=""><img src="img/Calendar.svg" alt="">История заказов</a>
+                </div>
+
+                <div class="crossballOption logout">
+                    <a href="#"><img src="img/Logout.svg" alt="">Выйти</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="crossballContentGameStatsBanner">
+            <div class="crossballContentGameStatsAchievements">
+                <p>Награды и достижения</p>
+                <img src="img/AchievementsTop.svg" alt="">
+                <img src="img/AchievementsBottom.svg" alt="">
+            </div>
+            <div class="crossballContentGameStats">
+                <div class="tab">
+                    <button class="tablinks active" onclick="openSeason(event, 'allSeason')">Все сезоны</button>
+                    <button class="tablinks" onclick="openSeason(event, 'lastSeason')">Сезон 2020/21</button>
+                </div>
+
+                <div id="allSeason" class="tabcontent" style="display: block;">
+                    <div class="tabcontentInfo">
+                        <div class="games">
+                            <p class="title">Игры</p>
+                            <p class="number">36</p>
+                        </div>
+                        <div class="goals">
+                            <p class="title">Голы</p>
+                            <p class="number">36</p>
+                        </div>
+                        <div class="passes">
+                            <p class="title">Пасы</p>
+                            <p class="number">36</p>
+                        </div>
+                        <div class="goalsAndpasses">
+                            <p class="title">Гол + пас</p>
+                            <p class="number">36</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="lastSeason" class="tabcontent">
+                    <div class="tabcontentInfo">
+                        <div class="games">
+                            <p class="title">Игры</p>
+                            <p class="number">36</p>
+                        </div>
+                        <div class="goals">
+                            <p class="title">Голы</p>
+                            <p class="number">67</p>
+                        </div>
+                        <div class="passes">
+                            <p class="title">Пасы</p>
+                            <p class="number">136</p>
+                        </div>
+                        <div class="goalsAndpasses">
+                            <p class="title">Гол + пас</p>
+                            <p class="number">36</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="crossballContentGameStatsAchievements-3">
+                <p>Поделиться</p>
+                <a href="#"><img src="img/FB.svg" alt=""></a>
+                <a href="#"><img src="img/VK.svg" alt=""></a>
+                <a href="#"><img src="img/Link.svg" alt=""></a>
+
+                <div class="pattern">
+                    <img src="img/Pattern.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="crossballMainContent">
+
+            <div class="dropdown">
+                <button onclick="formatDropdown()" class="dropbtn">
+                    Формат
+                    <img src="img/DropdownArrow.svg"></button>
+                <div id="formatDropdown" class="dropdown-content">
+                    <a href="#">Формат</a>
+                    <a href="#">Формат</a>
+                    <a href="#">Формат</a>
+                </div>
+            </div>
+
+            <div class="crossballGameTable">
+                <table id="table-id" class="table">
+                    <thead>
+                        <tr>
+                            <th class="season">Сезон</th>
+                            <th class="games">Кол-во игр</th>
+                            <th class="goals">Гол</th>
+                            <th class="passes">Пас</th>
+                            <th class="goalsAndpasses">Гол + пас</th>
+                            <th class="rating">Рейтинг</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td class="season">Сезон 2021/2020</td>
+                        <td class="games">5</td>
+                        <td class="goals">5</td>
+                        <td class="passes">2</td>
+                        <td class="goalsAndpasses">1</td>
+                        <td class="rating">89.40</td>
+                    </tr>
+                    <tr>
+                        <td class="season">Сезон 2020/2019</td>
+                        <td class="games">4</td>
+                        <td class="goals">6</td>
+                        <td class="passes">3</td>
+                        <td class="goalsAndpasses">2</td>
+                        <td class="rating">89.10</td>
+                    </tr>
+                    <tr>
+                        <td class="season">Сезон 2019/2018</td>
+                        <td class="games">7</td>
+                        <td class="goals">8</td>
+                        <td class="passes">4</td>
+                        <td class="goalsAndpasses">7</td>
+                        <td class="rating">91.50</td>
+                    </tr>
+                    <tr>
+                        <td class="season">Сезон 2018/2017</td>
+                        <td class="games">9</td>
+                        <td class="goals">7</td>
+                        <td class="passes">6</td>
+                        <td class="goalsAndpasses">3</td>
+                        <td class="rating">82</td>
+                    </tr>
+                    <tr>
+                        <td class="season">Сезон 2017/2016</td>
+                        <td class="games">11</td>
+                        <td class="goals">8</td>
+                        <td class="passes">10</td>
+                        <td class="goalsAndpasses">8</td>
+                        <td class="rating">78.35</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="crossballContacts">
+            <div class="logo">
+                <img src="img/FooterLogo.svg" alt="">
+            </div>
+
+            <div class="stores">
+                <a href="#"><img src="img/Appstore.svg" alt=""></a>
+                <a href="#"><img src="img/Googleplay.svg" alt=""></a>
+            </div>
+
+            <div class="ourContacts">
+                <p>Наши контакты:</p>
+                <a href="tel:+74951090309"><img src="img/Phone.svg" alt="">+7 (495) 109-03-09</a>
+                <a href="mailto:go@crossball.ru"><img src="img/Mail.svg" alt="">go@crossball.ru</a>
+            </div>
+        </div>
+
+        <div class="crossballSections">
+            <p>Разделы</p>
+            <a href="#">Главная</a>
+            <a href="#">Расписание</a>
+            <a href="#">Игровые отчеты</a>
+            <a href="#">Статистика</a>
+        </div>
+
+        <div class="crossballSports">
+            <p>Виды спорта</p>
+            <a href="#">Футбол</a>
+            <a href="#">Баскетбол</a>
+            <a href="#">Волейбол</a>
+        </div>
+
+        <div class="crossballUseful">
+            <p>Полезное</p>
+            <a href="#">Как записаться?</a>
+            <a href="#">Ответы на вопросы</a>
+            <a href="#">Достижения</a>
+        </div>
+
+        <div class="crossballPrice">
+            <p>Чё почем</p>
+            <a href="#">Как записаться?</a>
+            <a href="#">Ответы на вопросы</a>
+            <a href="#">Достижения</a>
+        </div>
+
+        <div class="crossballCopyright">
+            <span>&#169; Все права защищены</span>
+            <div class="crossballSocialSites">
+                <a href="#"><img src="img/IG.svg" alt=""></a>
+                <a href="#"><img src="img/VK.svg" alt=""></a>
+                <a href="#"><img src="img/FB.svg" alt=""></a>
+                <a href="#"><img src="img/YT.svg" alt=""></a>
+                <a href="#"><img src="img/Telegram.svg" alt=""></a>
+                <a href="#"><img src="img/WA.svg" alt=""></a>
+            </div>
+            <span>Сделали в Spans</span>
+        </div>
+    </footer>
+
+    <script src="js/toggleMenu.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/tablesort.min.js"></script>
+    <script src="js/tablesort.number.js"></script>
+    <script src="js/tablesort.date.js"></script>
+    <script src="js/tablesort.js"></script>
+</body>
+
+</html>

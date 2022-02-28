@@ -1,0 +1,253 @@
+@import "../css/style.css";
+
+@media screen and (max-width: 1440px){
+    .crossballContent {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 1415px){
+
+    .crossballContent {
+        grid-template-areas: "user user user"
+                             "stats stats stats"
+                             "tables tables tables";
+    }
+
+    .crossballUser {
+        grid-area: user;
+    }
+
+
+    .crossballMainContent {
+        grid-area: tables;
+    }
+
+
+    .crossballContentGameStatsBanner {
+        grid-template-areas: "achievements results results";
+        grid-area: stats;
+        margin-top: 20px;
+    }
+
+    .crossballContentGameStatsAchievements {
+        grid-area: achievements;
+    }
+
+    .crossballContentGameStats {
+        grid-area: results;
+        margin-left: 20px;
+    }
+
+    .crossballContentGameStats .tabcontentInfo {
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    .crossballContentGameStatsAchievements-3 {
+        display: none;
+    }
+
+    .crossballAboutUserBlock {
+        justify-content: flex-start;
+    }
+
+    .crossballUserInfoEdit {
+        justify-content: space-between;
+    }
+
+    .crossballUserInfoEdit .crossballUserShare {
+        display: block;
+        visibility: visible;
+        font-size: 12px;
+        line-height: 110%;
+        color: #ACAFF3;
+    }
+
+    .crossballUserInfoEdit .crossballUserShare img {
+        width: 40px;
+    }
+
+    .crossballUserInfoEdit .crossballUserShare a:hover {
+        opacity: .7;
+        transition: .3s ease;
+    }
+
+    .crossballUserInfoEdit .crossballUserShare p {
+        text-align: center;
+    }
+
+    .crossballSidebarContent {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1099px){
+    header {
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    header nav ul .mobileOption {
+        display: block;
+    }
+
+    header .navigation, header .imageProfile, header .userBlock {
+        display: none;
+    }
+
+    header .alerts.mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    header .alerts.mobile a {
+        margin-right: 20px;
+    }
+
+
+    .toggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(../img/Burger.svg);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 10000;
+    }
+
+    .toggle.active {
+        background: url(../img/Close.svg);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    header .navigation.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: #FAF9F9;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+
+    header .navigation.active .topmenu {
+        flex-direction: column;
+    }
+
+    header .navigation.active .topmenu img {
+        display: none;
+    }
+
+    header .navigation.active .topmenu li {
+        margin: 10px 10px;
+    }
+
+    header .navigation.active .topmenu li a{
+        font-size: 24px;
+    }
+
+    header .navigation.active .topmenu .submenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    footer {
+        grid-template-areas: ". . contacts . .";
+        height: 500px;
+        padding: 50px 10px 0 10px;
+    }
+
+    footer .crossballContacts {
+        grid-area: contacts;
+    }
+
+    footer .crossballSections, footer .crossballSports, footer .crossballUseful, footer .crossballPrice {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 803px){
+    .crossballContentGameStatsBanner {
+        grid-template-areas:"results results results"
+                            "achievements achievements .";
+    }
+
+    .crossballContentGameStats {
+        grid-area: results;
+        margin-left: 0;
+    }
+
+    .crossballContentGameStats .tabcontentInfo {
+        justify-content: space-between;
+    }
+
+    .crossballContentGameStatsAchievements {
+        grid-area: achievements;
+        margin-top: 20px;
+    }
+
+    .crossballContentGameStatsAchievements p {
+        display: block;
+        color: #909090;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    footer .crossballCopyright {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .crossballGameTable {
+        overflow-x: scroll;
+    }
+
+    .crossballGameTable .table {
+        width: 650px;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .crossballContent {
+        width: 100vw;
+    }
+
+    .crossballUser, .crossballContentGameStatsBanner {
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    .crossballContentGameStats .tab button {
+        padding: 10px;
+    }
+
+    .tabcontentInfo .title {
+        font-size: 12px;
+    }
+
+    .tabcontentInfo .number {
+        font-size: 20px;
+    }
+}
